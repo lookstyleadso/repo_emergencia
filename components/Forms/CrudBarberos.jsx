@@ -1,6 +1,6 @@
 "use client"
-
-
+import { useState } from 'react'
+import { useEffect } from 'react'
 
 function formBarbershop() {
 
@@ -30,7 +30,7 @@ function formBarbershop() {
     }, [cargar]);
 
     const agregarBarbershop = async (nombre_barberia, encargado, correo, phone, direccion, info, redes, estado) => {
-        let response = await fetch("http://localhost:3006/api/v1/barbershops/  ", {
+        let response = await fetch("https://adso-lookstyle.onrender.com/api/v1/barbershops/  ", {
             method: "POST",
             body: JSON.stringify({
                 barbershop_name: nombre_barberia,
